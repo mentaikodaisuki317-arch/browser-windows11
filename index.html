@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11 Web Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- デスクトップ -->
+    <div id="desktop" class="desktop">
+        <!-- 背景 -->
+        <div class="wallpaper"></div>
+
+        <!-- ウィンドウコンテナ -->
+        <div id="windows-container" class="windows-container"></div>
+
+        <!-- タスクバー -->
+        <div class="taskbar">
+            <div class="taskbar-start">
+                <button id="start-btn" class="start-btn" title="スタート">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <rect x="2" y="2" width="8" height="8" fill="currentColor"/>
+                        <rect x="14" y="2" width="8" height="8" fill="currentColor"/>
+                        <rect x="2" y="14" width="8" height="8" fill="currentColor"/>
+                        <rect x="14" y="14" width="8" height="8" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="taskbar-apps" id="taskbar-apps">
+                <!-- アプリアイコンがここに動的に追加される -->
+            </div>
+
+            <div class="taskbar-system">
+                <div class="system-tray">
+                    <span id="clock">00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- スタートメニュー -->
+        <div id="start-menu" class="start-menu hidden">
+            <div class="start-menu-header">
+                <h2>よく使うアプリ</h2>
+            </div>
+            <div class="start-menu-apps" id="start-menu-apps">
+                <!-- アプリがここに追加される -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/windows.js"></script>
+    <script src="js/taskbar.js"></script>
+    <script src="js/apps.js"></script>
+</body>
+</html>
